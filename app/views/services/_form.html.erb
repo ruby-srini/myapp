@@ -1,0 +1,69 @@
+<%= form_for(@service) do |f| %>
+  <% if @service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% @service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.select :type, TYPES, {} %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+    <div class="field">
+    <%= f.label :fax %>
+    <%= f.text_field :fax %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.select :location, LOCATIONS, {} %>
+  </div>
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+    <div class="field">
+    <%= f.label :publish_email_to %>
+    <%= f.select :publish_email,EMAIL_VISIBILITY, {} %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %>
+    <%= f.text_field :keywords %>
+  </div>
+  <br>
+  Administrator
+  <HR>
+  <div class="field">
+    <%= f.label :publish_to %>
+    <%= f.select :publish_to,PUBLISH_TO, {} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ownership %>
+    <%= f.select :ownership,OWNERSHIP, {} %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
