@@ -11,5 +11,43 @@
  * file per style scope.
  *
  *= require_tree .
+
+
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "animate";
+
+//body {
+//  background: #FFFFFF;
+//}
+//body {
+//  background: rgb(235, 238, 243);
+//}
+.main_content {
+  padding: 0 0 50px 0;
+}
+.service_title {
+  margin: 0 0 20px 0;
+}
+.services {
+  padding: 15px 0;
+  border-bottom: 1px solid #EAEAEA;
+
+}
+.form-inline {
+  margin-top: 15px;
+}
+.form-input {
+  width: 35% !important;
+  float: left;
+}
+.form-button {
+  float: left;
+  width: 30% !important;
+  margin-left: 5%;
+}
+.add-button {
+  margin-top: 25px;
+}

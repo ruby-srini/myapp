@@ -1,69 +1,124 @@
-<%= form_for(@service) do |f| %>
-  <% if @service.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+<%= form_for(@service, :html => {:class => "form-horizontal"} ) do |f| %>
+    <% if @service.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
-      <ul>
-      <% @service.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @service.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :name %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.text_field :name, {class: 'form-control',placeholder: "Name"} %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :type %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.select :type, TYPES, { include_blank: 'Select Type' } ,{class: 'form-control'}%>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :type %>
-    <%= f.select :type, TYPES, {} %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :phone %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.text_field :phone ,{class: "form-control",placeholder: "Phone"} %>
+      </div>
+    </div>
 
-    <div class="field">
-    <%= f.label :fax %>
-    <%= f.text_field :fax %>
-  </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :fax %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.text_field :fax, {class: 'form-control',placeholder: "Fax"}%>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.select :location, LOCATIONS, {} %>
-  </div>
-  <div class="field">
-    <%= f.label :website %>
-    <%= f.text_field :website %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-    <div class="field">
-    <%= f.label :publish_email_to %>
-    <%= f.select :publish_email,EMAIL_VISIBILITY, {} %>
-  </div>
-  <div class="field">
-    <%= f.label :keywords %>
-    <%= f.text_field :keywords %>
-  </div>
-  <br>
-  Administrator
-  <HR>
-  <div class="field">
-    <%= f.label :publish_to %>
-    <%= f.select :publish_to,PUBLISH_TO, {} %>
-  </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :location %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.select :location, LOCATIONS, { include_blank: 'Select Location' }, {class: 'form-control',placeholder: "Location"} %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :ownership %>
-    <%= f.select :ownership,OWNERSHIP, {} %>
-  </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :website %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.text_field :website, {class: 'form-control',placeholder: "Website"} %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :Email %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.text_field :email, {class: 'form-control',placeholder: "Email"} %>
+
+          <a href="#", class="glyphicon glyphicon-info-sign"></a>
+
+      </div>
+
+      <div class="col-sm-1">
+        <%= f.label :publish_email_to %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.select :publish_email,EMAIL_VISIBILITY, { include_blank: 'Select Visibility' } , {class: 'form-control'}%>
+      </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :keywords %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.text_field :keywords, {class: 'form-control',placeholder: "Keywords"} %>
+      </div>
+    </div>
+    <br>
+    Administrator
+    <HR>
+
+
+    <div class="form-group">
+      <div class="col-sm-1">
+        <%= f.label :publish_to %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.select :publish_to,PUBLISH_TO, { include_blank: 'Select Publish To' }, {class: 'form-control'} %>
+      </div>
+      <div class="col-sm-1">
+        <%= f.label :ownership %>
+      </div>
+      <div class="col-sm-5">
+        <%= f.select :ownership,OWNERSHIP, { include_blank: 'Select Ownership' } , {class: 'form-control'}%>
+      </div>
+    </div>
+
+
+
+    <div class="actions">
+      <%= f.submit  class: "btn btn-primary"%>
+      <%= link_to "Cancel", :back, :class=>"btn btn-primary" %>
+    </div>
 <% end %>

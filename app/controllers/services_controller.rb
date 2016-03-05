@@ -61,6 +61,14 @@ class ServicesController < ApplicationController
     end
   end
 
+  def search
+    if params[:search].present?
+      @services = Service.search(params[:search])
+    else
+      @services = Service.all
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_service
