@@ -1,11 +1,13 @@
 <%= form_for(@service, :html => {:class => "form-horizontal"} ) do |f| %>
+
     <% if @service.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
-
+          <div class="alert alert-danger">
+            The form contains <%= pluralize(@service.errors.count, "error") %>.
+          </div>
           <ul>
-            <% @service.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
+            <% @service.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
             <% end %>
           </ul>
         </div>

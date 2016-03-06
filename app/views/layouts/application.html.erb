@@ -11,12 +11,25 @@
 
 </head>
 <body>
+
+<%# if notice%>
+
+<!-- <p id="notice"><%#=notice %></p>-->
+
+<%# elsif alert %>
+
+<!--<p id="alert"><%#=alert %></p>-->
+
+<%# end %>
+
 <%= render 'layouts/header' %>
+<%= render partial: "shared/flash_messages", flash: flash %>
 <div class="container">
   <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
   <%= yield %>
 </div>
+
 </body>
 </html>
