@@ -29,7 +29,8 @@ gem 'autoprefixer-rails'
 gem 'sprockets-rails'
 gem 'bootstrap-growl-rails'
 gem 'faker'
-
+gem 'bettertabs'
+gem 'geocoder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

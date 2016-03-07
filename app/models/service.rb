@@ -1,7 +1,8 @@
 class Service < ActiveRecord::Base
- searchkick
+
  # require 'uri'
   self.inheritance_column = nil  #type field will be allowed
+  searchkick
   attr_accessor :TYPES, :LOCATIONS, :EMAIL_VISIBILITY, :PUBLISH_TO, :OWNERSHIP # constant arrays
 
   before_validation :remove_white_spaces  , :only => [:name, :phone, :fax, :location, :website,:email,:keywords]
@@ -21,6 +22,15 @@ class Service < ActiveRecord::Base
   validates :phone, length: { in: 7..15, wrong_length: "Phone length between 7-15" }
   #validates_plausible_phone :phone, country_code: 'US'
   #validates_format_of :phone, with: /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/
+
+
+ # geocode maps
+
+ geocoded_by :location
+ after_validation :geocode, if: :location_changed?
+
+ # end geocode maps
+
 
   def remove_white_spaces()
     # trim whitespace from beginning and end of string attributes

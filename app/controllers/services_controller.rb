@@ -10,6 +10,7 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+
   end
 
   # GET /services/new
@@ -77,6 +78,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:name,  :type, :phone, :fax,:location, :website, :email,:keywords,:publish_email, :publish_to, :ownership )
+      params.require(:service).permit(:name,  :type, :phone, :fax,:location, :website, :email,:keywords,:publish_email, :publish_to, :ownership,:latitude, :longitude )
     end
 end

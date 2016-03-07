@@ -1,5 +1,17 @@
 <!--<p id="notice"><%#= notice %></p>-->
 
+<!-- tabs -->
+
+<%= bettertabs :mytabs do |tab| %>
+    <%= tab.static :summary, 'Summary', :partial => 'summary' %>
+
+    <%= tab.static :Phone, 'Phone', :partial => 'phone' %>
+    <%= tab.static :location,'location', :partial => 'location' %>
+    <%= tab.static :alias,'Aliases', :partial => 'alias' %>
+<% end %>
+
+<!-- end of tabs -->
+
 <p>
   <strong>Name:</strong>
   <%= @service.name %>
