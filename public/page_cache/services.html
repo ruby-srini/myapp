@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Myapp</title>
+  <link rel="stylesheet" media="all" href="/assets/custom.self-0e431f85aec019763f0c1d6c378e8f8164374889bbf3a3a1a4153914b7d76628.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/scaffolds.self-e77f5fe533918747f11516288383ccec14330b80ea8d5c5fadc742d1f0854a9e.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/services.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application.self-978bcb6fe10789f0da7852bff6dc12ecfeb4b5f5ba367384102aa1046442d18c.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap-notify.self-1db3a961b9727066bdbf8f0e2c50022c00ffb9fbc9c7d22c29c5d4e3f4c922c3.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/growlyflash/alert.self-e0ad2823d3679beac643de0127205faf9bfd662ef05e8fe6f7cca34100ed1220.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/growlyflash/listener.self-422cfd9cd429307121c39fdc18d8fb3e5d5b866b11b877a18e0a76d303824034.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/growlyflash.self-ea67ad370a35dc834243796818bea6c16c9b6bef11a5535402a608bc18963be6.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/services.self-f5249cd28735d994378fc8e54fc914ba098e95da106fa1180edf3c94052a4a71.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="1jmuGJiMFR2xksWGiCBUYQbnF0TdFrQLdN1En7VMaFJ9VFYJiZOPuEimrGzlcMXsGxUVosMpEPH0Xyc9Pf3Ivw==" />
+
+</head>
+<body>
+
+
+<!-- <p id="notice"></p>-->
+
+
+<!--<p id="alert"></p>-->
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">WCMC</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search" action="/services/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <p>
+            <input type="text" name="search" id="search" class="form-control" />
+            <input type="submit" value="Search" class="btn btn-default" />
+          </p>
+</form>    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+  <!--<#% flash.each do |name, msg| %>-->
+      <!---->
+  <!--<#% end %>-->
+  <p id="notice"></p>
+
+<h1>Listing Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Phone</th>
+      <th>Location</th>
+      <th>Website</th>
+      <th>Visibility</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <nav class="pagination">
+    
+    
+        <span class="page current">
+  1
+</span>
+
+        <span class="page">
+  <a rel="next" href="/services?page=2">2</a>
+</span>
+
+        <span class="page">
+  <a href="/services?page=3">3</a>
+</span>
+
+        <span class="page">
+  <a href="/services?page=4">4</a>
+</span>
+
+        <span class="page">
+  <a href="/services?page=5">5</a>
+</span>
+
+        <span class="page gap">&hellip;</span>
+
+    <span class="next">
+  <a rel="next" href="/services?page=2">Next &rsaquo;</a>
+</span>
+
+    <span class="last">
+  <a href="/services?page=6">Last &raquo;</a>
+</span>
+
+  </nav>
+
+      <tr>
+        <td>Adah O&#39;connell</td>
+        <td>Clinical</td>
+        <td>792628776</td>
+        <td>Los Angeles</td>
+        <td>http://stamm.name/helen.hagenes</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/51">Show</a></td>
+        <td><a href="/services/51/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/51">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Adell Mueller</td>
+        <td>Clinical</td>
+        <td>484499126</td>
+        <td>New York</td>
+        <td>http://turcotte.net/kaden</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/113">Show</a></td>
+        <td><a href="/services/113/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/113">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Adrian Reichel Ph D</td>
+        <td>Service</td>
+        <td>793268268</td>
+        <td>Chicago</td>
+        <td>http://ondricka.biz/camron</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/159">Show</a></td>
+        <td><a href="/services/159/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/159">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Aglae White</td>
+        <td>Division</td>
+        <td>365795671</td>
+        <td>Los Angeles</td>
+        <td>http://sauerbarton.org/dusty.cole</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/36">Show</a></td>
+        <td><a href="/services/36/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/36">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Aletha Wunsch</td>
+        <td>Department</td>
+        <td>562051521</td>
+        <td>York</td>
+        <td>http://pfefferarmstrong.name/johnnie</td>
+        <td>Public</td>
+
+        <td><a href="/services/249">Show</a></td>
+        <td><a href="/services/249/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/249">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Alfonzo Collins</td>
+        <td>Division</td>
+        <td>844743435</td>
+        <td>New York</td>
+        <td>http://ondricka.com/nico</td>
+        <td>Public</td>
+
+        <td><a href="/services/12">Show</a></td>
+        <td><a href="/services/12/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/12">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Allen Rosenbaum</td>
+        <td>Laboratory</td>
+        <td>526145546</td>
+        <td>New York</td>
+        <td>http://roberttrosin.io/bailee.paucek</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/2">Show</a></td>
+        <td><a href="/services/2/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/2">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Alvera Harris V</td>
+        <td>Center</td>
+        <td>613785440</td>
+        <td>Los Angeles</td>
+        <td>http://muller.co/claire_cronin</td>
+        <td>Public</td>
+
+        <td><a href="/services/229">Show</a></td>
+        <td><a href="/services/229/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/229">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Alysa Mac Gyver</td>
+        <td>Division</td>
+        <td>110975326</td>
+        <td>New Jersey</td>
+        <td>http://crookskuhlman.org/luella_crooks</td>
+        <td>Public</td>
+
+        <td><a href="/services/19">Show</a></td>
+        <td><a href="/services/19/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/19">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Amani Smitham Jr.</td>
+        <td>Center</td>
+        <td>727303308</td>
+        <td>Chicago</td>
+        <td>http://borerdurgan.com/ocie.lockman</td>
+        <td>Public</td>
+
+        <td><a href="/services/29">Show</a></td>
+        <td><a href="/services/29/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/29">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Amelie Terry Md</td>
+        <td>Laboratory</td>
+        <td>337031583</td>
+        <td>York</td>
+        <td>http://kiehn.biz/bert</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/133">Show</a></td>
+        <td><a href="/services/133/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/133">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Aniyah Nikolaus</td>
+        <td>Division</td>
+        <td>265254456</td>
+        <td>Los Angeles</td>
+        <td>http://parisian.biz/felicity</td>
+        <td>Public</td>
+
+        <td><a href="/services/97">Show</a></td>
+        <td><a href="/services/97/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/97">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Annabel Jacobi Iv</td>
+        <td>Department</td>
+        <td>366502459</td>
+        <td>York</td>
+        <td>http://feest.com/dewayne_reilly</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/217">Show</a></td>
+        <td><a href="/services/217/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/217">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Annabelle Considine Dvm</td>
+        <td>Center</td>
+        <td>483729722</td>
+        <td>Los Angeles</td>
+        <td>http://botsfordschumm.net/carmen</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/117">Show</a></td>
+        <td><a href="/services/117/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/117">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Arvid Stehr</td>
+        <td>Laboratory</td>
+        <td>808762826</td>
+        <td>Chicago</td>
+        <td>http://heathcote.net/grayce_bednar</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/116">Show</a></td>
+        <td><a href="/services/116/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/116">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Astrid Hahn</td>
+        <td>Division</td>
+        <td>420479807</td>
+        <td>Los Angeles</td>
+        <td>http://smitham.biz/jovanny</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/4">Show</a></td>
+        <td><a href="/services/4/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/4">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Audie Halvorson Ph D</td>
+        <td>Division</td>
+        <td>769759857</td>
+        <td>New Jersey</td>
+        <td>http://dietrich.io/shany_grimes</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/171">Show</a></td>
+        <td><a href="/services/171/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/171">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Audreanne Prosacco</td>
+        <td>Center</td>
+        <td>423763810</td>
+        <td>Los Angeles</td>
+        <td>http://robel.biz/marguerite</td>
+        <td>Public</td>
+
+        <td><a href="/services/200">Show</a></td>
+        <td><a href="/services/200/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/200">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Austin Haag</td>
+        <td>Center</td>
+        <td>657204814</td>
+        <td>Los Angeles</td>
+        <td>http://rutherford.info/caden</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/14">Show</a></td>
+        <td><a href="/services/14/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/14">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Barbara Feeney</td>
+        <td>Clinical</td>
+        <td>825746870</td>
+        <td>New York</td>
+        <td>http://emard.info/roselyn</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/1">Show</a></td>
+        <td><a href="/services/1/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/1">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Benjamin Collins</td>
+        <td>Division</td>
+        <td>161009697</td>
+        <td>New York</td>
+        <td>http://lehner.com/mae</td>
+        <td>Public</td>
+
+        <td><a href="/services/58">Show</a></td>
+        <td><a href="/services/58/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/58">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Bernie Heaney</td>
+        <td>Service</td>
+        <td>855747316</td>
+        <td>New Jersey</td>
+        <td>http://feest.org/gretchen</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/138">Show</a></td>
+        <td><a href="/services/138/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/138">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Berniece Bogisich</td>
+        <td>Center</td>
+        <td>786113734</td>
+        <td>York</td>
+        <td>http://hand.name/orpha.weber</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/100">Show</a></td>
+        <td><a href="/services/100/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/100">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Bette Wehner</td>
+        <td>Division</td>
+        <td>934871556</td>
+        <td>Los Angeles</td>
+        <td>http://haley.co/amelie.stiedemann</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/105">Show</a></td>
+        <td><a href="/services/105/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/105">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Bo Anderson Iii</td>
+        <td>Center</td>
+        <td>472497971</td>
+        <td>Chicago</td>
+        <td>http://thompson.info/jodie.doyle</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/70">Show</a></td>
+        <td><a href="/services/70/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/70">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Brady Hackett Sr.</td>
+        <td>Division</td>
+        <td>879984485</td>
+        <td>Los Angeles</td>
+        <td>http://stehrhauck.io/abelardo</td>
+        <td>Public</td>
+
+        <td><a href="/services/65">Show</a></td>
+        <td><a href="/services/65/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/65">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Breana Koss</td>
+        <td>Service</td>
+        <td>434175688</td>
+        <td>New York</td>
+        <td>http://kautzerrosenbaum.com/clifton.robel</td>
+        <td>Public</td>
+
+        <td><a href="/services/198">Show</a></td>
+        <td><a href="/services/198/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/198">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Brenden Runte V</td>
+        <td>Department</td>
+        <td>637532239</td>
+        <td>New York</td>
+        <td>http://gislason.co/verna.goodwin</td>
+        <td>Public</td>
+
+        <td><a href="/services/111">Show</a></td>
+        <td><a href="/services/111/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/111">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Brendon Satterfield</td>
+        <td>Institute</td>
+        <td>769109386</td>
+        <td>York</td>
+        <td>http://shields.com/ottilie</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/209">Show</a></td>
+        <td><a href="/services/209/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/209">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Brennan Cartwright</td>
+        <td>Division</td>
+        <td>548863714</td>
+        <td>New York</td>
+        <td>http://hermanzulauf.io/dustin</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/16">Show</a></td>
+        <td><a href="/services/16/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/16">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Bridie Champlin</td>
+        <td>Institute</td>
+        <td>236429314</td>
+        <td>Los Angeles</td>
+        <td>http://gaylord.name/delia</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/99">Show</a></td>
+        <td><a href="/services/99/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/99">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Brielle Bauch Iv</td>
+        <td>Clinical</td>
+        <td>337422452</td>
+        <td>New Jersey</td>
+        <td>http://hansen.co/amy_king</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/68">Show</a></td>
+        <td><a href="/services/68/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/68">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Bryon Reichert V</td>
+        <td>Service</td>
+        <td>434875314</td>
+        <td>Chicago</td>
+        <td>http://wittingprice.org/hadley</td>
+        <td>Public</td>
+
+        <td><a href="/services/231">Show</a></td>
+        <td><a href="/services/231/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/231">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Caden Ward</td>
+        <td>Laboratory</td>
+        <td>368425760</td>
+        <td>New York</td>
+        <td>http://ankunding.biz/hans</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/96">Show</a></td>
+        <td><a href="/services/96/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/96">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Caleb Goldner Iii</td>
+        <td>Service</td>
+        <td>390332733</td>
+        <td>York</td>
+        <td>http://king.info/eulalia.koch</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/6">Show</a></td>
+        <td><a href="/services/6/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/6">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Camila Homenick</td>
+        <td>Service</td>
+        <td>236391165</td>
+        <td>New Jersey</td>
+        <td>http://bechtelarschmeler.co/moises.mante</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/201">Show</a></td>
+        <td><a href="/services/201/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/201">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Candice Ferry</td>
+        <td>Clinical</td>
+        <td>168255362</td>
+        <td>New York</td>
+        <td>http://bahringerhansen.net/triston</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/90">Show</a></td>
+        <td><a href="/services/90/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/90">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Carol Hintz</td>
+        <td>Department</td>
+        <td>678231863</td>
+        <td>York</td>
+        <td>http://deckow.io/ray.kreiger</td>
+        <td>Public</td>
+
+        <td><a href="/services/224">Show</a></td>
+        <td><a href="/services/224/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/224">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Casey Sporer Dvm</td>
+        <td>Center</td>
+        <td>960852148</td>
+        <td>Chicago</td>
+        <td>http://crooks.com/mohammad</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/63">Show</a></td>
+        <td><a href="/services/63/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/63">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Casimir Kertzmann Md</td>
+        <td>Division</td>
+        <td>950359070</td>
+        <td>York</td>
+        <td>http://gleason.com/vickie.purdy</td>
+        <td>Public</td>
+
+        <td><a href="/services/235">Show</a></td>
+        <td><a href="/services/235/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/235">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Ceasar Wiegand</td>
+        <td>Center</td>
+        <td>519218162</td>
+        <td>York</td>
+        <td>http://labadiebeier.io/davin.cormier</td>
+        <td>Public</td>
+
+        <td><a href="/services/32">Show</a></td>
+        <td><a href="/services/32/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/32">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Cedrick Jacobi</td>
+        <td>Institute</td>
+        <td>655676006</td>
+        <td>Chicago</td>
+        <td>http://fritschbrakus.org/lavinia_green</td>
+        <td>Public</td>
+
+        <td><a href="/services/142">Show</a></td>
+        <td><a href="/services/142/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/142">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Chaim Schiller Dvm</td>
+        <td>Laboratory</td>
+        <td>770960430</td>
+        <td>New York</td>
+        <td>http://hackett.io/jettie</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/248">Show</a></td>
+        <td><a href="/services/248/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/248">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Clemmie Stoltenberg</td>
+        <td>Division</td>
+        <td>455223971</td>
+        <td>York</td>
+        <td>http://conroy.info/malika.hirthe</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/241">Show</a></td>
+        <td><a href="/services/241/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/241">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Cleveland Harber</td>
+        <td>Service</td>
+        <td>338583139</td>
+        <td>New Jersey</td>
+        <td>http://quigleyupton.info/major.lehner</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/115">Show</a></td>
+        <td><a href="/services/115/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/115">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Collin Goldner</td>
+        <td>Division</td>
+        <td>803459402</td>
+        <td>New Jersey</td>
+        <td>http://parkerkaulke.net/pinkie</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/126">Show</a></td>
+        <td><a href="/services/126/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/126">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Colt Schmidt</td>
+        <td>Service</td>
+        <td>273471814</td>
+        <td>New York</td>
+        <td>http://doyle.com/emory</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/120">Show</a></td>
+        <td><a href="/services/120/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/120">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Corbin Anderson I</td>
+        <td>Clinical</td>
+        <td>535502686</td>
+        <td>Chicago</td>
+        <td>http://torp.com/elton_dietrich</td>
+        <td>Suppress from view</td>
+
+        <td><a href="/services/52">Show</a></td>
+        <td><a href="/services/52/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/52">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Cordelia Langosh</td>
+        <td>Center</td>
+        <td>170817777</td>
+        <td>Los Angeles</td>
+        <td>http://aufderhar.name/alia</td>
+        <td>Public</td>
+
+        <td><a href="/services/129">Show</a></td>
+        <td><a href="/services/129/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/129">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>Cordia Marvin</td>
+        <td>Clinical</td>
+        <td>663875371</td>
+        <td>Los Angeles</td>
+        <td>http://price.info/zoila.walsh</td>
+        <td>Publish on home page</td>
+
+        <td><a href="/services/31">Show</a></td>
+        <td><a href="/services/31/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/services/31">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<a href="/services/new">New Service</a>
+
+</div>
+
+</body>
+</html>

@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require bootstrap-notify
+//= require growlyflash
 //= require jquery_ujs
 //= require turbolinks
 

@@ -31,6 +31,11 @@ gem 'bootstrap-growl-rails'
 gem 'faker'
 gem 'bettertabs'
 gem 'geocoder'
+gem 'libxml-ruby'
+gem 'growlyflash'
+gem 'kaminari'
+gem 'actionpack-page_caching'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

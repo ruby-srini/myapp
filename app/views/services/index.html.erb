@@ -16,6 +16,7 @@
   </thead>
 
   <tbody>
+  <%= paginate @services %>
     <% @services.each do |service| %>
       <tr>
         <td><%= service.name %></td>

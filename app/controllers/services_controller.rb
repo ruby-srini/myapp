@@ -1,10 +1,11 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-
+  caches_page :index, :show
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
+    @services = Service.order(:name).page(params[:page]).per(50)
+
   end
 
   # GET /services/1

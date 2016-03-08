@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= growlyflash_static_notices %>
   <title>Myapp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -25,9 +26,9 @@
 <%= render 'layouts/header' %>
 <%= render partial: "shared/flash_messages", flash: flash %>
 <div class="container">
-  <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-info") %>
-  <% end %>
+  <!--<#% flash.each do |name, msg| %>-->
+      <!--<%#= content_tag(:div, msg, class: "alert alert-info") %>-->
+  <!--<#% end %>-->
   <%= yield %>
 </div>
 
